@@ -1,6 +1,22 @@
+input.onButtonPressed(Button.A, function () {
+    if (dood == 0) {
+        knuffel += 5
+    }
+})
+input.onButtonPressed(Button.AB, function () {
+    if (dood == 1) {
+        basic.showIcon(IconNames.Happy)
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    if (dood == 0) {
+        voeding += 5
+    }
+})
+let dood = 0
 let voeding = 20
 let knuffel = 20
-let dood = 0
+dood = 0
 loops.everyInterval(1000, function () {
     knuffel += -1
     voeding += -1
@@ -21,11 +37,5 @@ basic.forever(function () {
             . . . . .
             `)
         dood = 1
-    }
-    if (input.buttonIsPressed(Button.A)) {
-        knuffel += 5
-    }
-    if (input.buttonIsPressed(Button.B)) {
-        voeding += 5
     }
 })
